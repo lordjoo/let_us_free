@@ -19,5 +19,9 @@ router.post('/feedback', function(req, res, next) {
   res.redirect('/submit');
 })
 
+router.get("/feedback", async function(req, res, next) {
+  const data = await db.getFeedbacks();
+  res.render("list", {feedback: data});
+});
 
 module.exports = router;
