@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meewa Center</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light">
+  <div id="app">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card bg-whitw shadow-lg">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <h5 class="mb-0">Welcome To Memesat Support</h3>
+                  <p>Please Leave your message here, we will not reply back</p>
+                </div>
+                <div class="col-md-6">
+                  <!--  feedback form -->
+                  <form action="/feedback" method="post">
+                    <div class="form-group mb-2">
+                      <label class="form-label" for="name">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-2">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="message">Message</label>
+                      <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                  </div>
+                <div class="col-md-6" 
+                  style="
+                    background-image: url('/images/m1.jpg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                 ">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
