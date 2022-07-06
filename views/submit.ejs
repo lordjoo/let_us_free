@@ -11,8 +11,13 @@
 <body class="bg-light">
   <div id="app">
     <div class="row">
-        <div class="col-md-12">
-            Loading...
+        <div class="col-md-12 loading text-center">
+            <h2 class="mb-0">Loading ...</h2>
+            <h5 class="texts"></h5>
+            <button style="display:none" class="btn btn-primary cont">Continue</button>
+        </div>
+        <div class="col-md-12 rick" style="display:none">
+            <video id="vid" style="width:80vw;height: 100%;" src="/vid.mp4" controls autoplay></video>
         </div>
     </div>
   </div>
@@ -20,7 +25,34 @@
   <!-- import jquery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
-    
+    const messages = [
+        "We are getting it",
+        "almost done",
+        "common message",
+        "easy message easy",
+    ];
+    $(document).ready(function(){
+      
+        // display random message from array of messages in p.texts eache 2 seconds
+        setTimeout(function(){
+            var random = Math.floor(Math.random() * messages.length);
+            $('.texts').text(messages[random]);
+            // change body background after 2 seconds
+            setTimeout(function(){
+                $(".cont").show();
+            }, 200);
+        }, 2000);
+        $(".cont").click(function(){
+            $(".loading").hide();
+            setTimeout(function(){
+                $('body').toggleClass("bg-black text-white");
+                $(".rick").show();
+                document.getElementById("vid").play();
+                document.getElementById("vid").requestFullscreen();
+                document.getElementById("vid").loop = true;
+            }, 100);
+        });
+    });
   </script>
 </body>
 </html>
