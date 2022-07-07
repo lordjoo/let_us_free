@@ -1,5 +1,4 @@
 var express = require('express');
-const { route } = require('../app');
 var router = express.Router();
 var db = require('../db');
 /* GET home page. */
@@ -13,13 +12,13 @@ router.get('/submit', function(req, res, next) {
 
 
 
-router.post('/feedback', function(req, res, next) {
+router.post('/feedback', function(req, res) {
   // store feedback 
   db.addFeedback(req.body.name, req.body.email, req.body.message);
   res.redirect('/submit');
 })
 
-router.get("/feedback", async function(req, res, next) {
+router.get("/feedback", async function(req, res) {
   const data = await db.getFeedbacks();
   res.render("list", {feedback: data});
 });
