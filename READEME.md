@@ -5,5 +5,9 @@ This is a simple express js app with a feedbacks table to store users feedbacks,
 1. clone the repo 
 2. run ```npm i```
 3. run ```node bin/www```
+4. Have fun 
 
-Have fun 
+## Functions & Routes 
+- store feedback URL: ```/```
+- list feedbacks URL: ```/feedback```
+
